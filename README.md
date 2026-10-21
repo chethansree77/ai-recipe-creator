@@ -83,3 +83,16 @@ This project demonstrates practical skills in Python development, Generative AI 
 **Chethana Sai Sree**
 
 GitHub: [@chethansree77](https://github.com/chethansree77)
+
+
+## 📸 Application Screenshots
+
+### 🏠 Home Page
+![AI Recipe Creator Home Page](screenshots/recipe-home.png)
+
+### 🍳 Generated Recipe
+![Generated Recipe Result](screenshots/recipe-result.png)
+
+### 📋 Recipe Details
+![Recipe Details](screenshots/recipe-details.png)
+
