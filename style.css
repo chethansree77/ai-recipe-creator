@@ -1,0 +1,377 @@
+/* =====================================================
+   MAIN APP BACKGROUND
+   ===================================================== */
+
+.stApp {
+    background: linear-gradient(
+        135deg,
+        #fff7ed,
+        #ffedd5,
+        #fef3c7
+    );
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   MAIN TITLE
+   ===================================================== */
+
+.main-title {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+    color: #ea580c;
+    margin-top: 20px;
+    margin-bottom: 8px;
+
+    animation: titleAppear 1s ease;
+    transition: transform 0.3s ease;
+}
+
+
+/* Title hover */
+
+.main-title:hover {
+    transform: scale(1.05);
+}
+
+
+.subtitle {
+    text-align: center;
+    font-size: 18px;
+    color: #7c2d12;
+    margin-bottom: 35px;
+
+    animation: fadeUp 1.2s ease;
+}
+
+
+/* =====================================================
+   INGREDIENT INPUT
+   ===================================================== */
+
+.stTextArea textarea {
+
+    border: 2px solid #fdba74 !important;
+
+    border-radius: 18px !important;
+
+    background: rgba(255, 255, 255, 0.9) !important;
+
+    font-size: 17px !important;
+
+    padding: 15px !important;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease !important;
+}
+
+
+/* Input hover */
+
+.stTextArea textarea:hover {
+
+    transform: scale(1.01);
+
+    border-color: #f97316 !important;
+
+    box-shadow:
+        0 8px 20px rgba(249, 115, 22, 0.15) !important;
+}
+
+
+/* Input focus */
+
+.stTextArea textarea:focus {
+
+    transform: scale(1.015);
+
+    border-color: #ea580c !important;
+
+    box-shadow:
+        0 0 20px rgba(234, 88, 12, 0.25) !important;
+}
+
+
+/* =====================================================
+   GENERATE BUTTON
+   ===================================================== */
+
+.stButton > button {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 18px;
+
+    padding: 15px 20px;
+
+    font-size: 19px;
+
+    font-weight: 700;
+
+    color: white;
+
+    background: linear-gradient(
+        90deg,
+        #f97316,
+        #ea580c
+    );
+
+    box-shadow:
+        0 7px 18px rgba(234, 88, 12, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+
+    cursor: pointer;
+}
+
+
+/* Button hover */
+
+.stButton > button:hover {
+
+    transform: scale(1.04);
+
+    background: linear-gradient(
+        90deg,
+        #ea580c,
+        #c2410c
+    );
+
+    box-shadow:
+        0 12px 30px rgba(234, 88, 12, 0.40);
+}
+
+
+/* Button click */
+
+.stButton > button:active {
+
+    transform: scale(0.97);
+}
+
+
+/* =====================================================
+   RECIPE CARD
+   ===================================================== */
+
+.recipe-card {
+
+    background: rgba(255, 255, 255, 0.94);
+
+    padding: 32px;
+
+    border-radius: 25px;
+
+    margin-top: 30px;
+
+    border: 1px solid #fed7aa;
+
+    box-shadow:
+        0 12px 35px rgba(120, 53, 15, 0.12);
+
+    animation: recipeAppear 0.8s ease;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Recipe card hover */
+
+.recipe-card:hover {
+
+    transform: translateY(-6px) scale(1.01);
+
+    box-shadow:
+        0 20px 45px rgba(120, 53, 15, 0.18);
+}
+
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+
+.recipe-card h1,
+.recipe-card h2,
+.recipe-card h3 {
+
+    color: #c2410c;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.recipe-card h1:hover,
+.recipe-card h2:hover,
+.recipe-card h3:hover {
+
+    transform: translateX(6px);
+
+    color: #ea580c;
+}
+
+
+/* =====================================================
+   INGREDIENT LIST
+   ===================================================== */
+
+.recipe-card li {
+
+    padding: 8px;
+
+    margin: 5px 0;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.recipe-card li:hover {
+
+    transform: translateX(8px);
+
+    background: #fff7ed;
+}
+
+
+/* =====================================================
+   RECIPE TEXT
+   ===================================================== */
+
+.recipe-card p {
+
+    line-height: 1.7;
+
+    color: #431407;
+}
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+   ===================================================== */
+
+div[data-testid="stAlert"] {
+
+    border-radius: 15px;
+
+    animation: fadeUp 0.6s ease;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+div[data-testid="stAlert"]:hover {
+
+    transform: scale(1.02);
+}
+
+
+/* =====================================================
+   LOADING ANIMATION
+   ===================================================== */
+
+div[data-testid="stSpinner"] {
+
+    animation: pulse 1.5s infinite;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+   ===================================================== */
+
+@keyframes titleAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-30px)
+            scale(0.9);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes recipeAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.96);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes pulse {
+
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
